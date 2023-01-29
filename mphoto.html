@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<style >
+		body{
+			background-color: #DCF3F0;
+		}
+		.img-gallery{
+			width: 90%;
+			margin: 30px auto 30px;
+			display: grid;
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			grid-gap: 30px;
+		}
+		.img-gallery img{
+			width: 100%;
+			cursor: pointer;
+			transition: 0.4s;
+		}
+		.img-gallery img:hover{
+			transform: scale(0.8) rotate(-15deg);
+			border-radius: 20px;
+			box-shadow: 0 32px 75px rgba(68, 77, 136, 0.2);
+		}
+		.full-img{
+			width: 100%;
+			height: 100vh;
+			background: rgba(0, 0, 0, 0.9);
+			position: fixed;
+			top: 0;
+			left: 0;
+			display: none;
+		    align-items: center;
+			justify-content: center;
+			z-index: 100;
+		}
+		.full-img{
+            width: 100%;
+            
+		}
+		.full-img span{
+			position: absolute;
+			top: 5%;
+			right: 5%;
+			font-size: 30px;
+			color: #fff;
+			cursor: pointer;
+		}
+	</style>
+</head>
+<body>
+	<h1>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp    Mountain View </h1>
+	<div class="full-img" id="fullimgBox">
+		<img src="img/beach4.jpg" id="fullimg">
+		<span onclick="closefullimg()">X</span>
+	</div>
+	<div class="img-gallery">
+		
+       <img src="img/mountain img/m1.jpg"onclick="openfullimg(this.src)">
+       <img src="img/mountain img/m2.jpg"onclick="openfullimg(this.src)">
+       <img src="img/mountain img/m3.jpg"onclick="openfullimg(this.src)">
+       <img src="img/mountain img/m4.jpg"onclick="openfullimg(this.src)">
+       <img src="img/mountain img/m5.jpg"onclick="openfullimg(this.src)">
+       <img src="img/mountain img/m6.jpg"onclick="openfullimg(this.src)">
+       <img src="img/mountain img/m7.jpg"onclick="openfullimg(this.src)">
+       <img src="img/mountain img/m8.jpg"onclick="openfullimg(this.src)">
+       <img src="img/mountain img/m9.jpg"onclick="openfullimg(this.src)">
+       <img src="img/mountain img/m10.jpg"onclick="openfullimg(this.src)">
+       <img src="img/mountain img/m11.jpg"onclick="openfullimg(this.src)">
+       <img src="img/mountain img/m12.jpg"onclick="openfullimg(this.src)">
+       
+      
+     </div>
+      <script>
+    	var fullimgBox = document.getElementById("fullimgBox");
+    	var fullimg = document.getElementById("fullimg");
+    	function openfullimg(pic){
+    		fullimgBox.style.display= "flex";
+    		fullimg.src = pic;
+    	}
+    	function closefullimg(){
+    		fullimgBox.style.display="none"
+    	}
+
+    </script>
+</body>
+</html>
